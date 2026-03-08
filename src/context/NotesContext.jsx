@@ -7,7 +7,7 @@ export const NotesProvider = ({ children }) => {
     const [notes, setNotes] = useState([]);
     useEffect(() => {
         const savedNotes = JSON.parse(localStorage.getItem("notes"));
-        if (savedNotes) {
+        if (savedNotes.length > 0) {
             setNotes(savedNotes);
         }
     }, []);
@@ -17,7 +17,7 @@ export const NotesProvider = ({ children }) => {
     }, [notes]);
 
     const addNote = (note) => {
-        setNotes([...notes, note]);
+        setNotes((prev)=>[...prev, note]);
     };
     return (
         <NotesContext.Provider value={{ notes, addNote }}>
