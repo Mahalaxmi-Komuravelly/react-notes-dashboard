@@ -15,7 +15,7 @@ const NoteInput = () => {
         inputRef.current.focus();
     }, [])
     return (
-        <div>
+        <div class='addNotes'>
             <input type='text' placeholder='Enter Notes' value={note} ref={inputRef} onChange={(e) => setNote(e.target.value)} />
             <button onClick={handleAdd}>Add Notes</button>
         </div>
