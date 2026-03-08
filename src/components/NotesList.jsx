@@ -11,7 +11,7 @@ const NotesList = () => {
             <li key={i}
             onClick={()=>setSelectedIndex(i)}
             style={{
-                backgroundColor:selectedIndex === i ? "skyblue":"white",
+                backgroundColor:selectedIndex === i ? "blue":"white",
                 cursor:"pointer",
                 margin:"5px",
                 padding:"5px",
